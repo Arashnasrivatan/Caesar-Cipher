@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher | arashnasrivatan</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- tailwind -->
+    <script src="assets/js/3.4.5.js"></script>
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- sweetalert -->
+    <script src="assets/js/sweetalert2@11.js"></script>
+</head>
+<body class="flex flex-col min-h-screen relative overflow-hidden">
+    <header>
+        <div class="nav navbar bg-base-100">
+            <div class="navbar-start">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle" id="dropdown-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hidden lg:flex lg:navbar-center">
+                <a href="https://arashnasri.com" class="btn btn-ghost text-xl">Caesar Cipher</a>
+            </div>
+            <div class="navbar-end">
+                <div role="tablist" class="tabs tabs-bordered">
+                    <input type="radio" role="tab" name="tab" class="tab" aria-label="encode" checked />
+                    <input type="radio" name="tab" role="tab" class="tab" aria-label="decode" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <ul tabindex="0" class="dropdown-content menu menu-sm bg-base-100 rounded-box mt-3 w-[300px] p-2 shadow" id="dropdown-menu"
+        style="display: none; position: absolute; top: 60px; left: 20px; z-index: 10;">
+        <li>
+            <label class="form-control flex justify-between items-center">
+                <span class="label-text">Shift Key</span>
+                <input type="text" placeholder="Shift Key" name="shift" id="shift-input" maxlength="4" size="4" value="3" class="input input-bordered w-full text-center" />
+            </label>
+        </li>
+        <li>
+            <label class="form-control flex justify-between items-center">
+                <span class="label-text">Modulo</span>
+                <input type="text" placeholder="Modulo" name="mod" id="mod-input" maxlength="4" size="4" value="36" class="input input-bordered w-full text-center" />
+            </label>
+        </li>
+        <li>
+            <label class="form-control flex justify-between items-center">
+                <span class="label-text">Alphabet</span>
+                <input type="text" placeholder="Alphabet" name="alphabet" id="alphabet-input" value="abcdefghijklmnopqrstuvwxyz" class="input input-bordered w-full text-center" />
+            </label>
+        </li>
+        <li>
+          <label class="form-control flex justify-between items-center">
+            <span class="label-text">Letter Case</span>
+            <select id="letter-case" class="select select-bordered w-full">
+              <option value="1">Maintain Case</option>
+              <option value="2">Lower Case</option>
+              <option value="3">Upper Case</option>
+            </select>
+          </label>
+        </li>
+    </ul>
+    <main class="flex-grow p-5">
+        <div class="flex justify-center items-center flex-col mt-5">
+            <textarea placeholder="Plaintext" id="input-text" class="textarea textarea-bordered textarea-lg w-full max-w-md h-[150px]"></textarea>
+            <button data-theme="dark" id="submit-button" class="btn btn-active mt-3 text-white">Submit</button>
+        </div>
+    </main>
+    <footer class="footer footer-center bg-base-300 text-base-content p-4">
+      <aside class="flex flex-row justify-between items-center w-full">
+          <img class="h-[50px]" src="assets/images/footer2.gif" alt="">
+            <p>Bright Expo 2024 - Arashnasrivatan</p>
+            <img class="h-[50px]" src="assets/images/footer1.gif" alt="">
+        </aside>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
